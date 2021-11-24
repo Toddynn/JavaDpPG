@@ -1,5 +1,6 @@
 import java.util.Random;
 
-public class Biblioteca(){
+public class Biblioteca{
     
+   
 }

@@ -8,6 +8,7 @@ public class Livro {
     private int ano;
     private String autor;
     private boolean disponivel;
+ 
 
     public Livro(String titulo, int isbn, int ano, String autor, boolean disponivel) {
         this.titulo = titulo;
@@ -57,16 +58,4 @@ public class Livro {
         this.disponivel = disponivel;
     }
 
-    public static void main(String[] args){
-        ArrayList<String> autor = new ArrayList<String>();
-        Scanner input = new Scanner(System.in);
-
-        for(int i = 0; i < 5; i++){
-            System.out.print("Digite o nome" + i + ":");
-            autor.add(input.nextLine());
-        }
-        for(int i = 0; i < autor.size(); i++){
-            System.out.println(autor.get());
-        }
-    }
 }
