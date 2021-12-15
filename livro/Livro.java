@@ -1,3 +1,5 @@
+//Vinícius Gabriel Todis & Emilly Rodrigues
+package livro;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -57,5 +59,5 @@ public class Livro {
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
-
+    
 }
