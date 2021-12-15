@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Biblioteca{
     
-    
     public static void menu(){
             System.out.println("\tMenu");
             System.out.println("0. Cadastrar livro");
@@ -18,19 +17,19 @@ public class Biblioteca{
         }
     
         public static void cadastra(){
-            System.out.println("Você entrou no método cadastra.");
+            System.out.println("Você entrou no metodo cadastra.");
         }
         
         public static void modifica(){
-            System.out.println("Você entrou no método modifica.");
+            System.out.println("Você entrou no metodo modifica.");
         }
         
         public static void exclui(){
-            System.out.println("Você entrou no método exclui.");
+            System.out.println("Você entrou no metodo exclui.");
         }
     
         public static void consulta(Livro livro){
-            System.out.println("Você entrou no método consulta.\n");
+            System.out.println("Você entrou no metodo consulta.\n");
             for(int i = 0; i <= consulta.length; i++){
                 System.out.printf("Titulo %s | ISBN :%d\n Ano %d | autores %s |\n", produto.getTitulo(), produto.getIsbn(), produto.getAno(), produto.getAutor());
             }
@@ -40,6 +39,7 @@ public class Biblioteca{
         int opcao;
         Scanner entrada = new Scanner(System.in);
         
+
         do{
             menu();
             opcao = entrada.nextInt();

@@ -11,7 +11,6 @@ public class Livro {
     private String autor;
     private boolean disponivel;
  
-
     public Livro(String titulo, int isbn, int ano, String autor, boolean disponivel) {
         this.titulo = titulo;
         this.isbn = isbn;
