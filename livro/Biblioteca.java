@@ -3,8 +3,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Biblioteca{
-    
-    public static void menu(){
+    static Scanner entrada = new Scanner(System.in);
+    public static void imprimirMenu(){
             System.out.println("\tMenu");
             System.out.println("0. Cadastrar livro");
             System.out.println("1. Modificar livro");
@@ -17,33 +17,107 @@ public class Biblioteca{
         }
     
         public static void cadastra(){
-            System.out.println("Você entrou no metodo cadastra.");
+            quant = 0;
+            System.out.println("Você entrou no metodo cadastra. ");
+            System.out.println("Quantos livros deseja cadastrar? ");
+    
+            quant = entrada.nextInt();
+
+            ArrayList<Livro> cadastroLivro = new ArrayList<Livro>();
+		    
+            String Livro = 0;
+          
+        for(var j = 0; j < quant; j++) {
+            do{ 
+                System.out.println("Informe o título do livro:");
+                titulo = entrada.nextInt();
+            if(titulo != 0){
+                cadastroLivro.add(new Livro(titulo));
+            }      
+            }while(titulo != 0);
+            for(int i=0; i<cadastroLivro.size(); i++){
+                System.out.println(cadastroLivro.get(i).getTitulo());
+            }
+
+            do{ 
+                System.out.println("Informe o ISBN do livro:");
+                isbn = entrada.nextInt();
+            if(isbn != 0){
+                cadastroLivro.add(new Livro(isbn));
+            }      
+            }while(isbn != 0);
+            for(int i=0; i<cadastroLivro.size(); i++){
+                System.out.println(cadastroLivro.get(i).getIsbn());
+            }
+            
+            do{ 
+                System.out.println("Informe o ano livro:");
+                ano = entrada.nextInt();
+            if(ano != 0){
+                cadastroLivro.add(new Livro(ano));
+            }      
+            }while(ano != 0);
+            for(int i=0; i<cadastroLivro.size(); i++){
+                System.out.println(cadastroLivro.get(i).getAno());
+            }
+            
+            do{ 
+                System.out.println("Informe o Autor do livro:");
+                autor = entrada.nextInt();
+            if(autor != 0){
+                cadastroLivro.add(new Livro(autor));
+            }      
+            }while(autor != 0);
+            for(int i=0; i<cadastroLivro.size(); i++){
+                System.out.println(cadastroLivro.get(i).getAutor());
+            }
+            
+        }
         }
         
-        public static void modifica(){
-            System.out.println("Você entrou no metodo modifica.");
+        public static void modifica(Livro livro){
+            System.out.println("Você entrou no metodo modifica. ");
+            for(int i=0; i<cadastroLivro.size(); i++){
+                System.out.println(i + ": " + cadastroLivro.get(i));
+            }
+            System.out.println("Qual livro deseja modificar? ");
+            modificar = entrada.nextInt();
+
+            System.out.println("Digite o novo nome do livro :");
+            nomeLivro = entrada.nextInt();
+
+            System.out.println("Digite o novo nome do autor :");
+            nomeAutor = entrada.nextInt();
+
+            System.out.println("Digite o novo isbn do livro :");
+            isbnNovo = entrada.nextInt();
+
+            System.out.println("Digite o novo ano do livro :");
+            novoAno = entrada.nextInt();
+
+            cadastroLivro.get(modificar).setTitulo(nomeLivro).setAutor(nomeautor).setAno(novoAno).setIsbn(isbnNovo);
+
+            
         }
         
-        public static void exclui(){
+        public static void exclui(Livro livro){
             System.out.println("Você entrou no metodo exclui.");
         }
     
         public static void consulta(Livro livro){
             System.out.println("Você entrou no metodo consulta.\n");
             for(int i = 0; i <= consulta.length; i++){
-                System.out.printf("Titulo %s | ISBN :%d\n Ano %d | autores %s |\n", produto.getTitulo(), produto.getIsbn(), produto.getAno(), produto.getAutor());
+                System.out.printf("Titulo %s | ISBN :%d\n Ano %d | autores %s |\n", livro.getTitulo(), livro.getIsbn(), livro.getAno(), livro.getAutor());
             }
         }
-    }
+    
     public static void main(String[] args) {
+        imprimirMenu();
         int opcao;
-        Scanner entrada = new Scanner(System.in);
-        
+        opcao = entrada.nextInt();
 
         do{
-            menu();
-            opcao = entrada.nextInt();
-            
+
             switch(opcao){
             case 1:
                 cadastra();
@@ -69,16 +143,6 @@ public class Biblioteca{
                 System.out.println("Opção inválida.");
             }
         } while(opcao != 0);
-
-        Livro produto = new consulta("nome_livro_1", 123, 2000, "joao");
-        Livro produto2 = new consulta("nome_livro_2", 456, 2001, "alfredo");
-        Livro produto3 = new consulta("nome_livro_3", 789, 2002, "plinio");
-        Livro produto4 = new consulta("nome_livro_4", 147, 2003, "rodrigo");
-        Livro produto5 = new consulta("nome_livro_5", 852, 2004, "jessica");
-        Livro produto6 = new consulta("nome_livro_6", 369, 2005, "raimunda");
-        Livro produto7 = new consulta("nome_livro_7", 987, 2006, "josefina");
-        Livro produto8 = new consulta("nome_livro_8", 654, 1997, "adalberto");
-        Livro produto9 = new consulta("nome_livro_9", 321, 1994, "douglas");
 
 
     }

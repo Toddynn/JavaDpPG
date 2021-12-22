@@ -15,12 +15,12 @@ public class IdadeTeste{
           
         do{
             try{
-                System.out.println("Informe a idade do cliente: ");
+                System.out.println("Informe a idade do cliente: *Tecle 0 para sair*");
                 idade = entrada.nextInt();
                 if(idade != 0){
                     cadastroIdade.add(new Idade(idade));
                 }      
-            } catch(InputMismatchException error){
+            } catch(InputMismatch1Exception error){
                 System.err.println(error);
                 System.out.println("Caractere invalido");
                 entrada.nextLine();
