@@ -1,9 +1,13 @@
+package livro;
+
 //Vinícius Gabriel Todis & Emilly Rodrigues
-import java.util.Random;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Biblioteca{
     static Scanner entrada = new Scanner(System.in);
+    static ArrayList<Livro> cadastroLivro;
     public static void imprimirMenu(){
             System.out.println("\tMenu");
             System.out.println("0. Cadastrar livro");
@@ -17,7 +21,7 @@ public class Biblioteca{
         }
     
         public static void cadastra(){
-            quant = 0;
+            int quant = 0;
             System.out.println("Você entrou no metodo cadastra. ");
             System.out.println("Quantos livros deseja cadastrar? ");
     
@@ -25,9 +29,10 @@ public class Biblioteca{
 
             ArrayList<Livro> cadastroLivro = new ArrayList<Livro>();
 		    
-            String Livro = 0;
+            String Livro;
           
         for(var j = 0; j < quant; j++) {
+            int titulo;
             do{ 
                 System.out.println("Informe o título do livro:");
                 titulo = entrada.nextInt();
@@ -39,6 +44,7 @@ public class Biblioteca{
                 System.out.println(cadastroLivro.get(i).getTitulo());
             }
 
+            int isbn;
             do{ 
                 System.out.println("Informe o ISBN do livro:");
                 isbn = entrada.nextInt();
@@ -50,6 +56,7 @@ public class Biblioteca{
                 System.out.println(cadastroLivro.get(i).getIsbn());
             }
             
+            int ano;
             do{ 
                 System.out.println("Informe o ano livro:");
                 ano = entrada.nextInt();
@@ -61,6 +68,7 @@ public class Biblioteca{
                 System.out.println(cadastroLivro.get(i).getAno());
             }
             
+            int autor;
             do{ 
                 System.out.println("Informe o Autor do livro:");
                 autor = entrada.nextInt();
@@ -81,29 +89,47 @@ public class Biblioteca{
                 System.out.println(i + ": " + cadastroLivro.get(i));
             }
             System.out.println("Qual livro deseja modificar? ");
-            modificar = entrada.nextInt();
+            int modificar = entrada.nextInt();
 
             System.out.println("Digite o novo nome do livro :");
-            nomeLivro = entrada.nextInt();
+            int nomeLivro = entrada.nextInt();
 
             System.out.println("Digite o novo nome do autor :");
-            nomeAutor = entrada.nextInt();
+            int nomeAutor = entrada.nextInt();
 
             System.out.println("Digite o novo isbn do livro :");
-            isbnNovo = entrada.nextInt();
+            int isbnNovo = entrada.nextInt();
 
             System.out.println("Digite o novo ano do livro :");
-            novoAno = entrada.nextInt();
+            int novoAno = entrada.nextInt();
 
-            cadastroLivro.get(modificar).setTitulo(nomeLivro).setAutor(nomeautor).setAno(novoAno).setIsbn(isbnNovo);
+            cadastroLivro.get(modificar).setTitulo(nomeLivro).setAutor(nomeAutor).setAno(novoAno).setIsbn(isbnNovo);
 
             
         }
         
         public static void exclui(Livro livro){
             System.out.println("Você entrou no metodo exclui.");
+
+            
+            for(int i=0; i<cadastroLivro.size(); i++){
+                System.out.println(i + ": " + cadastroLivro.get(i));
+            }
+            System.out.println("Qual livro deseja excluir? ");
+            int excluir = entrada.nextInt();
+
+            cadastroLivro.get(excluir);
         }
-    
+        public static void alugar(Livro livro){
+            System.out.println("Você entrou no metodo aluga");
+            for(int i=0; i<cadastroLivro.size(); i++){
+                System.out.println(i + ": " + cadastroLivro.get(i));
+            }
+            System.out.println("Qual livro deseja alugar? ");
+            int aluga = entrada.nextInt();
+            
+            cadastroLivro.get(aluga);
+        }
         public static void consulta(Livro livro){
             System.out.println("Você entrou no metodo consulta.\n");
             for(int i = 0; i <= consulta.length; i++){
