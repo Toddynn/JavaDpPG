@@ -6,11 +6,14 @@ public class EmpregadoTeste {
             new EmpregadoComissionadoBase("Creusa", 456654, 25000, 0.12, 1000);
         EmpregadoHorista empregado3 =
             new EmpregadoHorista("Plinio", 789987, 40, 200);
+        EmpregadoAssalariado empregado4 =
+            new EmpregadoAssalariado("Cladio", 147741, 250);
         System.out.println(empregado1);
 
         System.out.println(empregado2);
 
         System.out.println(empregado3);
         
+        System.out.println(empregado4);
     }
 }

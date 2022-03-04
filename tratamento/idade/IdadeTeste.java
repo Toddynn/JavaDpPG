@@ -20,7 +20,7 @@ public class IdadeTeste{
                 if(idade != 0){
                     cadastroIdade.add(new Idade(idade));
                 }      
-            } catch(InputMismatch1Exception error){
+            } catch(InputMismatchException error){
                 System.err.println(error);
                 System.out.println("Caractere invalido");
                 entrada.nextLine();
