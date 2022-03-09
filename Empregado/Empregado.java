@@ -28,6 +28,6 @@ public class Empregado{
 
     @Override
     public String toString() {
-        return String.format("\n nome = %s Seguro = %d\n",getNome(), getNumeroSeguro());
+        return String.format("\n nome = %s \nSeguro = %d\n",getNome(), getNumeroSeguro());
     }
 }

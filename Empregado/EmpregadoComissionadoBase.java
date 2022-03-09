@@ -1,3 +1,5 @@
+import java.text.Format;
+
 public class EmpregadoComissionadoBase extends EmpregadoComissionado {
     private double salarioBase;
 

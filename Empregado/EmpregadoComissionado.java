@@ -1,3 +1,5 @@
+import java.text.Format;
+
 public class EmpregadoComissionado extends Empregado {
     private double vendasBrutas;
     private double taxaComissao;
@@ -26,7 +28,7 @@ public class EmpregadoComissionado extends Empregado {
 
     @Override
     public String toString() {
-        return String.format("nome = %s Seguro = %d \nVendas brutas = %.2f \nTaxa = %.2f \nGanhos = %.2f\n",getNome(), getNumeroSeguro(),  getVendasBrutas(), getTaxaComissao(), ganhos());
+        return String.format("nome = %s \nSeguro = %d \nVendas brutas = %.2f \nTaxa = %.2f \nGanhos = %.2f\n",getNome(), getNumeroSeguro(),  getVendasBrutas(), getTaxaComissao(), ganhos());
     }
 
         
