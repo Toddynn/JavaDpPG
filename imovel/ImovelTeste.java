@@ -1,4 +1,5 @@
-//VINÍCIUS GABRIEL TODIS E EMILLY RODRIGUES;
+//VINICIUS GABRIEL TODIS E EMILLY RODRIGUES;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ImovelTeste {
@@ -22,6 +23,20 @@ public class ImovelTeste {
         cep = entrada.nextInt();
         System.out.println("Informe o preco do imovel novo: ");
         preco = entrada.nextDouble();
+        
+        Novo imovel1 = null;
+        
+        try {
+            imovel1 = new Novo(rua, numero, bairro, cep, preco, preco);
+            
+        } catch (Exception err) {
+            System.err.println("Erro" + err);
+        }
+        
+        if(imovel1 != null){
+            System.out.println(imovel1);
+        }
+
 
         System.out.println("Informe a rua do imovel velho: ");
         rua = entrada.next();
@@ -34,18 +49,13 @@ public class ImovelTeste {
         System.out.println("Informe o preco do imovel velho: ");
         preco = entrada.nextDouble();
 
-        Novo imovel1 = null;
+        
         Velho imovel2 = null;
 
         try {
-            imovel1 = new Novo(" " + rua, " " + numero," " + bairro," " + cep," " + preco);
-            imovel2 = new Velho(" " + rua, " " + numero," " + bairro," " + cep," " + preco);
+            imovel2 = new Velho(rua, numero, bairro, cep, preco, preco);    
         } catch (Exception err) {
             System.err.println("Erro" + err);
-        }
-        
-        if(imovel1 != null){
-            System.out.println(imovel1);
         }
         if(imovel2 != null){
             System.out.println(imovel2);

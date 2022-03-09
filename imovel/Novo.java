@@ -1,4 +1,4 @@
-//VINÍCIUS GABRIEL TODIS E EMILLY RODRIGUES;
+//VINICIUS GABRIEL TODIS E EMILLY RODRIGUES;
 
 public class Novo extends Imovel{
     private double adicional;
@@ -13,13 +13,13 @@ public class Novo extends Imovel{
     }
 
     public void setAdicional(double adicional) {
-        adicional = 1.5;
-        this.adicional = getPreco() * adicional;
+        adicional = 25;
+        this.adicional = getPreco() / adicional;
     }
 
     @Override
     public String toString() {
-        return String.format("%s Adicional: %.2f\n Preco final: %.2f\n", super.toString(), getAdicional());
+        return String.format("%s Adicional: %.2f\n", super.toString(), getAdicional());
     }
 }
 
