@@ -1,9 +1,9 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class PessoaTeste{
 
     public static void main(String []args){
-        Scanner s = new Scanner(System.in);
+        //Scanner s = new Scanner(System.in);
         
         Pessoa p = new Pessoa();
         p.setNome("Gelson");
@@ -11,11 +11,15 @@ public class PessoaTeste{
         p.setSalario(0);
         System.out.println("nome = " + p.getNome() + "\n idade = " + p.getIdade() + "\n salario" + p.getSalario());
         
-        Pessoa p2 = new Pessoa("Claudio", 24);
+        Pessoa p2 = new Pessoa();
+        p2.setNome("Claudio");
+        p2.setIdade(24);
         p2.setSalario(2000);
         System.out.println("nome = " + p2.getNome() + "\n idade = " + p2.getIdade());
         
-        Pessoa p3 = new Pessoa("Juarez", 30);
+        Pessoa p3 = new Pessoa();
+        p3.setNome("Juarez");
+        p3.setIdade(30);
         p3.setSalario(3000, 10);
         System.out.println("nome = " + p3.getNome() + "\n idade = " + p3.getIdade() + "\n salario = " + p3.getSalario());
         
